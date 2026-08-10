@@ -6,12 +6,18 @@ RESET = "\033[0m"
 VERDE = "\033[1;32m"
 NEGRITA = "\033[1m"
 def conectar():
-    return mysql.connector.connect(
-        host="localhost",      
-        user="root",          
-        password="",           
-        database="stockmaster_db"  
+    try:
+        return mysql.connector.connect(
+            host="localhost",      
+            user="root",          
+            password="",           
+            database="stockmaster_db"  
     )
+    except:
+            print(f"{ROJO}=============================================================={RESET}")
+            print(f"{NEGRITA}\t\t 📦 Base de datos apagada\n\t\t    Prende MySQL en Xampp{RESET}")
+            print(f"{ROJO}=============================================================={RESET}\n")
+            input("\n\t\tPRESIONE ENTER PARA SALIR\n")
 
 conexion = conectar()
 
