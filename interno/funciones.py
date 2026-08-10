@@ -18,6 +18,7 @@ def conectar():
             print(f"{NEGRITA}\t\t 📦 Base de datos apagada\n\t\t    Prende MySQL en Xampp{RESET}")
             print(f"{ROJO}=============================================================={RESET}\n")
             input("\n\t\tPRESIONE ENTER PARA SALIR\n")
+            exit()
 
 conexion = conectar()
 
